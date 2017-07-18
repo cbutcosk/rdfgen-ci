@@ -2,12 +2,12 @@ language: bash
 
 sudo: enabled
 
-before_script:
+#before_script:
   # do the java thangs: install jre, get karma
-  - sudo add-apt-repository --yes ppa:webupd8team/java
-  - sudo apt-get update
-  - sudo apt-get install oracle-java7-installer
-  - sudo apt-get install oracle-java-set-default
+  #- sudo add-apt-repository --yes ppa:webupd8team/java
+  #- sudo apt-get update
+  #- sudo apt-get install oracle-java7-installer
+  #- sudo apt-get install oracle-java-set-default
 
 script: 
   # Simple version: take ccma_objects.json and ccma_objects-model.ttl and make RDF
