@@ -1,0 +1,22 @@
+language: bash
+
+sudo: enabled
+
+before_script:
+  # do the java thangs: install jre, get karma
+  - add-apt-repository ppa:webupd8team/java
+  - apt-get update
+  - apt-get install oracle-java7-installer
+  - apt-get install oracle-java-set-default
+
+script: 
+  # Simple version: take ccma_objects.json and ccma_objects-model.ttl and make RDF
+  - wget https://github.com/usc-isi-i2/Web-Karma/releases/download/v2.053/karma-spark-0.0.1-SNAPSHOT-shaded.jar
+  - java -cp karma-spark-0.0.1-SNAPSHOT-shaded.jar edu.isi.karma.rdf.OfflineRdfGenerator --sourcetype JSON --filepath ccma_objects.json --modelfilepath ccma_objects-model.ttl --sourcename ccma --outputfile test.rdf
+  # descend into each directory
+    # find a *.csv, *.xlsx, *.json, *.xml
+    # keep the file extension handy
+    # run karma-offline
+    # copy the files to ..
+
+  # concat all .rdf files
