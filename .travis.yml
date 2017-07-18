@@ -1,6 +1,6 @@
 language: bash
 
-sudo: enabled
+#sudo: enabled
 
 #before_script:
   # do the java thangs: install jre, get karma
