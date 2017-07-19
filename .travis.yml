@@ -4,7 +4,7 @@ script:
   # Simple version: take ccma_objects.json and ccma_objects-model.ttl and make RDF
   - wget https://github.com/usc-isi-i2/Web-Karma/releases/download/v2.053/karma-spark-0.0.1-SNAPSHOT-shaded.jar
   - java -cp karma-spark-0.0.1-SNAPSHOT-shaded.jar edu.isi.karma.rdf.OfflineRdfGenerator --sourcetype JSON --filepath ccma_objects.json --modelfilepath ccma_objects-model.ttl --sourcename ccma --outputfile test.rdf
-  - python
+  
   # FIXME Real version:
     # Parse out config bits from workflow config
     # For each repo config: 
