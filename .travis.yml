@@ -1,4 +1,11 @@
-language: bash
+language: python
+ python:
+   - "2.7"
+   
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
 
 script: 
   # Simple version: take ccma_objects.json and ccma_objects-model.ttl and make RDF
